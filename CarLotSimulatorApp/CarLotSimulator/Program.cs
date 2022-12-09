@@ -1,22 +1,51 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace CarLotSimulator
 {
     class Program
     {
         static void Main(string[] args)
+        
         {
-            //TODO
+            
+            Car car1 = new Car(2013, "Toyota", "Tacoma", "Vrooom", "Beep beep", true);
+            
 
-            //Create a seperate class file called Car
-            //Car shall have the following properties: Year, Make, Model, EngineNoise, HonkNoise, IsDriveable
-            //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
-            //The methods should take one string parameter: the respective noise property
+            Car car2 = new Car(2013, "Kia", "Sportage", "Zoom", "Honk Honk", true);
+           
 
+            Car car3 = new Car(1999, "Chevrolet", "Lumina", "Chuchuchcuchu", "Womp", false);
+           
 
-            //Now that the Car class is created we can instanciate 3 new cars
-            //Set the properties for each of the cars
-            //Call each of the methods for each car
+            //foreach (var item in ) 
+            
+            Console.WriteLine($"Vehicle: {car1.Make} {car1.Model} {car1.Year}");
+            Console.WriteLine("Engine and horn test:");
+            car1.MakeEngineNoise("Vrooom");
+            car1.MakeHonkNoise("Beep Beep");
+            Console.WriteLine($"Is this car drivable? " + true);
+            Console.WriteLine("This car is redy for sale!");
+            Console.WriteLine();
+
+            Console.WriteLine($"Vehicle: {car2.Make} {car2.Model} {car2.Year}");
+            Console.WriteLine("Engine and horn test:");
+            car2.MakeEngineNoise("Zoom");
+            car2.MakeHonkNoise("Honk Honk");
+            Console.WriteLine($"Is this car drivable? " + true);
+            Console.WriteLine("This car is redy for sale!");
+            Console.WriteLine();
+
+            Console.WriteLine($"Vehicle: {car3.Make} {car3.Model} {car3.Year}");
+            Console.WriteLine("Engine and horn test:");
+            car3.MakeEngineNoise("chuchuchuchuchuchu");
+            car3.MakeHonkNoise("Womp");
+            Console.WriteLine($"Is this car drivable? " + false);
+            Console.WriteLine("This car is not redy for sale");
+
+           
+
 
             //*************BONUS*************//
 
@@ -29,5 +58,6 @@ namespace CarLotSimulator
             //Instanciate the a Carlot at the beginning of the program and as you create a car add the car to the list.
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
         }
+        
     }
 }
