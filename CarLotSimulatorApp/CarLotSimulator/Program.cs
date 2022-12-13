@@ -9,18 +9,7 @@ namespace CarLotSimulator
         static void Main(string[] args)
         
         {
-            
             Car car1 = new Car(2013, "Toyota", "Tacoma", "Vrooom", "Beep beep", true);
-            
-
-            Car car2 = new Car(2013, "Kia", "Sportage", "Zoom", "Honk Honk", true);
-           
-
-            Car car3 = new Car(1999, "Chevrolet", "Lumina", "Chuchuchcuchu", "Womp", false);
-           
-
-            //foreach (var item in ) 
-            
             Console.WriteLine($"Vehicle: {car1.Make} {car1.Model} {car1.Year}");
             Console.WriteLine("Engine and horn test:");
             car1.MakeEngineNoise("Vrooom");
@@ -28,7 +17,10 @@ namespace CarLotSimulator
             Console.WriteLine($"Is this car drivable? " + true);
             Console.WriteLine("This car is redy for sale!");
             Console.WriteLine();
+            Console.WriteLine($"Starting with {CarLot.numberOfCars} car in the lot.");
+            Console.WriteLine();
 
+            Car car2 = new Car(2013, "Kia", "Sportage", "Zoom", "Honk Honk", true);
             Console.WriteLine($"Vehicle: {car2.Make} {car2.Model} {car2.Year}");
             Console.WriteLine("Engine and horn test:");
             car2.MakeEngineNoise("Zoom");
@@ -36,15 +28,31 @@ namespace CarLotSimulator
             Console.WriteLine($"Is this car drivable? " + true);
             Console.WriteLine("This car is redy for sale!");
             Console.WriteLine();
+            Console.WriteLine($"we have {CarLot.numberOfCars} in the lot.");
+            Console.WriteLine();
 
+            Car car3 = new Car(1999, "Chevrolet", "Lumina", "Chuchuchcuchu", "Womp", false);
             Console.WriteLine($"Vehicle: {car3.Make} {car3.Model} {car3.Year}");
             Console.WriteLine("Engine and horn test:");
             car3.MakeEngineNoise("chuchuchuchuchuchu");
             car3.MakeHonkNoise("Womp");
             Console.WriteLine($"Is this car drivable? " + false);
-            Console.WriteLine("This car is not redy for sale");
+            Console.WriteLine("This car is not redy for sale!");
+            Console.WriteLine();
+            Console.WriteLine($"We now have {CarLot.numberOfCars} but only 2 are ready for sale.");
 
            
+            
+
+            
+
+            
+            
+
+
+
+
+
 
 
             //*************BONUS*************//
